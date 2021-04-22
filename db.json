@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "name": "hsnnn",
+      "phone": "2101051511555",
+      "email": "dshsdhs@szgag.com",
+      "city": "asdn",
+      "street": "basdg",
+      "id": 2
+    },
+    {
+      "name": "Ahmed",
+      "phone": "1561651651515",
+      "email": "qwfasf@asasd.cm",
+      "city": "asf",
+      "street": "awfawf",
+      "id": 3
+    }
+  ]
+}

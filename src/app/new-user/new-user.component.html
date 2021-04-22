@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <form
+        [formGroup]="validation"
+        (ngSubmit)="createUser()"
+      >
+        <div class="form-group row mb-3">
+          <label for="name" class="col-3">name</label>
+          <div class="col">
+            <input type="text" class="form-control" formControlName="name"  [(ngModel)]="name" name="name" id="name">
+            <span
+              *ngIf="validation.controls.name.invalid && name"
+              class="text-danger"
+            >
+              name is required
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group row mb-3">
+          <label for="email" class="col-3">email</label>
+          <div class="col">
+            <input type="email" class="form-control " formControlName="email"  [(ngModel)]="email" name="email" id="email">
+            <span
+              *ngIf="validation.controls.email.invalid && email"
+              class="text-danger"
+            >
+              email is required
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group row mb-3">
+          <label for="phone" class="col-3">phone</label>
+          <div class="col">
+            <input type="text" class="form-control" formControlName="phone"  [(ngModel)]="phone" name="phone" id="phone">
+            <span
+              *ngIf="validation.controls.phone.invalid && phone"
+              class="text-danger"
+            >
+              phone is required and must be 13 number
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group row mb-3">
+          <label for="city" class="col-3">city</label>
+          <div class="col">
+            <input type="text" class="form-control " formControlName="city"  [(ngModel)]="city" name="city" id="city">
+            <span
+              *ngIf="validation.controls.city.invalid && city"
+              class="text-danger"
+            >
+              city is required
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group row mb-3">
+          <label for="street" class="col-3">street</label>
+          <div class="col">
+            <input type="text" class="form-control" formControlName="street"  [(ngModel)]="street" name="street" id="street">
+            <span
+              *ngIf="validation.controls.street.invalid && street"
+              class="text-danger"
+            >
+              street is required
+            </span>
+          </div>
+
+        </div>
+
+        <div class="text-center">
+          <button
+            [disabled]="validation.invalid"
+            type="submit" class="btn btn-success px-4">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
